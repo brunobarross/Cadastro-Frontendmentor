@@ -108,7 +108,7 @@ p {
   color: hsl(249, 10%, 26%);
   font-size: 1em;
   font-weight: 600;
-  max-width: 600px;
+  max-width: 100%;
 }
 
 input:focus {
@@ -160,7 +160,7 @@ input:focus {
 
 /* RESPONSIVIDADE */
 
-@media (min-width: 740px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .container {
     grid-template-columns: 1fr 1fr;
   }
@@ -174,7 +174,7 @@ input:focus {
   }
 
   .texto p {
-    font-size: 1em;
+    font-size: 0.875em;
   }
 
   .footer p {
