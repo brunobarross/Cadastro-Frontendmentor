@@ -62,14 +62,14 @@ p {
 }
 
 .texto h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   line-height: 1.3em;
   padding: 16px 0;
 }
 
 .texto p {
   line-height: 1.6em;
-  font-size: 1.125em;
+  font-size: 1em;
 }
 
 /* FORUMULÁRIO */
