@@ -77,7 +77,7 @@ p {
 .teste {
   max-width: 100%;
   background-color: hsl(248, 32%, 49%);
-  padding: 16px;
+  padding: 32px;
   border-radius: 10px;
   text-align: center;
   margin: 16px auto 32px auto;
