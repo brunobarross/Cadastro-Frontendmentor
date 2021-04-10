@@ -39,7 +39,7 @@ img {
   min-height: 100vh;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 55% 45%;
   grid-column-gap: 64px;
   grid-template-rows: auto;
   align-content: center;
@@ -48,6 +48,7 @@ img {
 
 .texto {
   align-self: center;
+  justify-self: center;
 }
 
 .texto h1,
@@ -68,12 +69,17 @@ p {
 /* FORUMULÁRIO */
 
 .teste {
+  max-width: 100%;
   background-color: hsl(248, 32%, 49%);
   padding: 16px;
   border-radius: 10px;
   text-align: center;
-  margin-bottom: 32px;
+  margin: 16px auto 32px auto;
   text-align: center;
+  font-size: 0.875em;
+  -webkit-box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .formulario form {
@@ -83,10 +89,14 @@ p {
   flex-direction: column;
   flex-wrap: wrap;
   border-radius: 10px;
+  margin: 0 auto;
+  -webkit-box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .formulario input {
-  margin: 8px 0;
+  margin: 16px 0;
   padding: 16px 32px;
   border: 1px solid hsl(246, 25%, 77%);
   border-radius: 10px;
@@ -96,14 +106,16 @@ p {
 }
 
 .formulario input::placeholder {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 span {
-  padding: 8px 0 0 0;
+  padding: 16px 0 0 0;
   font-size: 0.675em;
   max-width: 400px;
   margin: 0 auto;
+  text-align: center;
+  color: hsl(246, 25%, 77%);
 }
 
 span a {
@@ -116,4 +128,68 @@ span a {
   color: #fff;
   border: none;
   font-weight: 600;
+  padding: 16px;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  margin: 8px auto 0 auto;
+}
+
+@media (min-width: 740px) and (max-width: 1024px) {
+  .container {
+    grid-template-columns: 80%;
+  }
+
+  .texto {
+    text-align: center;
+  }
+
+  .texto h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 739px) {
+  .container {
+    padding: 64px 0;
+    grid-template-columns: 300px;
+    justify-content: center;
+  }
+
+  .texto {
+    text-align: center;
+  }
+
+  .texto h1 {
+    font-size: 1.5em;
+  }
+
+  .texto p {
+    font-size: 1em;
+  }
+
+  .formulario form {
+    align-content: center;
+  }
+
+  .formulario input {
+    max-width: 250px;
+    padding: 16px;
+  }
+
+  .formulario input::placeholder {
+    font-size: 0.775em;
+  }
+
+  #button {
+    font-size: 0.775em;
+    padding: 16px;
+    line-height: 1.5;
+  }
+
+  .teste {
+    margin: 32px auto;
+    padding: 16px 32px;
+    font-size: 0.775em;
+  }
 }
