@@ -42,7 +42,7 @@ img {
   min-height: 100vh;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 48% 52%;
   grid-column-gap: 64px;
   grid-template-rows: auto;
   align-content: center;
