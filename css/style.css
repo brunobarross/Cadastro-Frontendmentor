@@ -27,15 +27,18 @@ img {
   max-width: 100%;
 }
 
+/* CONTAINERS*/
+
 .principal {
   background-image: url("../img/bg-intro-desktop.png");
   background-size: cover;
   background-position: center;
   background-color: hsl(0, 100%, 74%);
+  overflow: hidden;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 70%;
   min-height: 100vh;
   margin: 0 auto;
   display: grid;
@@ -46,9 +49,11 @@ img {
   justify-content: center;
 }
 
+/* TEXTO PRINCIPAL */
+
 .texto {
   align-self: center;
-  justify-self: center;
+  text-align: left;
 }
 
 .texto h1,
@@ -64,6 +69,7 @@ p {
 
 .texto p {
   line-height: 2;
+  font-size: 1.125em;
 }
 
 /* FORUMULÁRIO */
@@ -89,7 +95,6 @@ p {
   flex-direction: column;
   flex-wrap: wrap;
   border-radius: 10px;
-  margin: 0 auto;
   -webkit-box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.3);
@@ -103,13 +108,18 @@ p {
   color: hsl(249, 10%, 26%);
   font-size: 1em;
   font-weight: 600;
+  max-width: 600px;
+}
+
+input:focus {
+  outline-color: hsl(248, 32%, 49%);
 }
 
 .formulario input::placeholder {
   font-weight: 600;
 }
 
-span {
+.termos {
   padding: 16px 0 0 0;
   font-size: 0.675em;
   max-width: 400px;
@@ -118,7 +128,7 @@ span {
   color: hsl(246, 25%, 77%);
 }
 
-span a {
+.termos a {
   color: hsl(0, 100%, 74%);
   font-weight: 600;
 }
@@ -135,21 +145,44 @@ span a {
   margin: 8px auto 0 auto;
 }
 
+/* FOOTER */
+
+.footer p {
+  font-size: 0.775em;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* RESPONSIVIDADE */
+
 @media (min-width: 740px) and (max-width: 1024px) {
   .container {
-    grid-template-columns: 80%;
+    grid-template-columns: 1fr 1fr;
   }
 
   .texto {
-    text-align: center;
+    text-align: left;
   }
 
   .texto h1 {
-    font-size: 2em;
+    font-size: 1.5em;
+  }
+
+  .texto p {
+    font-size: 1em;
+  }
+
+  .footer p {
+    font-size: 0.675em;
   }
 }
 
-@media (max-width: 739px) {
+@media (max-width: 768px) {
   .container {
     padding: 64px 0;
     grid-template-columns: 300px;
@@ -165,7 +198,7 @@ span a {
   }
 
   .texto p {
-    font-size: 1em;
+    font-size: 0.875em;
   }
 
   .formulario form {
@@ -178,7 +211,8 @@ span a {
   }
 
   .formulario input::placeholder {
-    font-size: 0.775em;
+    font-size: 0.875em;
+    text-align: center;
   }
 
   #button {
@@ -190,6 +224,10 @@ span a {
   .teste {
     margin: 32px auto;
     padding: 16px 32px;
-    font-size: 0.775em;
+    font-size: 0.875em;
+  }
+
+  .footer p {
+    font-size: 0.675em;
   }
 }
