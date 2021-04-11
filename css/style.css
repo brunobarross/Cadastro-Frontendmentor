@@ -54,6 +54,7 @@ img {
 .texto {
   align-self: center;
   text-align: left;
+  animation: fadein2 1.5s;
 }
 
 .texto h1,
@@ -72,6 +73,16 @@ p {
   font-size: 1em;
 }
 
+@keyframes fadein2 {
+  from {
+    transform: translateX(-1000px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
 /* FORUMULÁRIO */
 
 .teste {
@@ -86,9 +97,23 @@ p {
   -webkit-box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 1px 7px 5px 0px rgba(0, 0, 0, 0.3);
+  animation: desceteste 1.5s;
+}
+
+@keyframes desceteste {
+  from {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .formulario form {
+  animation: sobeform 1.5s ease-out;
+  animation-delay: 0.1s;
   background-color: #fff;
   padding: 32px;
   display: flex;
@@ -109,6 +134,17 @@ p {
   font-size: 1em;
   font-weight: 600;
   max-width: 100%;
+}
+
+@keyframes sobeform {
+  from {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  to {
+    -o-transform: translateY(-1000px);
+    opacity: 1;
+  }
 }
 
 input:focus {
